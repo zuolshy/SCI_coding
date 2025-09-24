@@ -48,12 +48,6 @@ rm(list=ls(all=TRUE))
 options(scipen = 999)#设定不使用科学计数法
 options(digits = 5)
 
-setwd("G:/BaiduSyncdisk/Rcoding/3PA_plaque/manuscript/03_21_2025/EBIOmedicine/R1/coding")
-# setwd("~/Downloads/同步空间/Rcoding/3PA_plaque")
-load("PA_dataset.RData")
-
-base::save.image("PA_dataset.RData")
-
 ####基线PA----
 # total_PA_ergo5 <- read_sav('V:/HomeDir/069509(L_Zuo)/Lipid_Plaque/data/ERGO 5 (RS-I-5, II-3, III-2) - LASA (07-2020).sav')
 # total_PA_ergojong <- read_sav('V:/HomeDir/069509(L_Zuo)/Lipid_Plaque/data/ERGO JONG (RS-III-1) - LASA (07-2020).sav')
@@ -800,4 +794,5 @@ table_stroke_check
 table_stroke_check <- table(data_check_stroke_1$inc_stroke_2015, data_check_stroke_1$inc_stroke_2020)
 names(dimnames(table_stroke_check)) <- c("inc_stroke_2015", "inc_stroke_2020")
 table_stroke_check
+
 
